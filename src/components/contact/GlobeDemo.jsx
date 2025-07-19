@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+
 import React, { lazy, Suspense } from "react";
 
 const World = lazy(() => import("./Globe").then((m) => ({ default: m.World })));
