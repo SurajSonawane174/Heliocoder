@@ -391,7 +391,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 bg-transparent relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 bg-transparent relative w-full z-[20]">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-[28rem] sm:h-[32rem] md:h-[40rem] lg:h-[48rem] px-4">
 
         <div className="absolute w-full bottom-[50px] h-[24rem] sm:h-[28rem] md:h-full z-10">

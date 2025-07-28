@@ -9,6 +9,7 @@ import ProjectsPage from './components/projects/page'
 import ContactPage from './components/contact/contactpage'
 import Form from './components/contact/Form'
 // import ContactPage from './components/contact/ContactPage'
+import EncrPage from './components/Encryption/page'
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={< ProjectsPage/>} />
           <Route path="/contact" element={< ContactPage/>} />
-          <Route path="/test" element={< Form/>} />
+          <Route path="/encryption" element={< EncrPage/>} />
+
           
         </Routes>
       </div>

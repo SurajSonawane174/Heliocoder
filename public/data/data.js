@@ -75,10 +75,10 @@ export const BtnList = [
     newTab: true,
   },
     {
-      label: "Instagram",
-      link: "https://www.instagram.com/suraj.sonawane267/",
-      icon: "instagram",
-      newTab: true,
+      label: "Encryption",
+      link: "/encryption",
+      icon: "lockkeyhole",
+      newTab: false,
     },
   {
     label: "Resume",

@@ -1,11 +1,13 @@
 import React from "react";
 import Form from "./Form"; // Adjust path as needed
+import StarsCanvas from "../Encryption/StarCanvas";
 import bg from "/backgrounds/bg-2.jpg"; // Adjust path as needed
 
 import { GlobeDemo } from "./GlobeDemo";
 export default function Contact() {
   return (
     <>
+      <StarsCanvas></StarsCanvas>
       {/* Background Image */}
       <img
         src={bg}

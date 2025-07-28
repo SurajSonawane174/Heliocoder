@@ -10,6 +10,7 @@ import SkillsSwiper from "./SkillsSwipper";
 import LampWithCube from "./LampWithCube";
 import LampDemo from "./LampDemo";
 import { LampContainer } from "./LampContainer";
+import StarsCanvas from "../Encryption/StarCanvas";
 
 const About = () => {
   const typedRef = useRef(null);
@@ -47,7 +48,7 @@ const About = () => {
       distance: "150px",
       duration: 2000,
       delay: 200,
-      origin: "bottom",
+      origin: "bottom", 
     });
 
     ScrollReveal().reveal(".reveal-right-always", {
@@ -63,6 +64,7 @@ const About = () => {
   return (
     <div className="about min-h-screen flex flex-col items-center justify-center">
       <div className="background">
+        <StarsCanvas></StarsCanvas>
         <img
           src="/backgrounds/trees.webp"
           alt=""
@@ -100,16 +102,16 @@ const About = () => {
 
           <div className="intro-buttons reveal-bottom">
             <a
-              href="/src/Suraj_Sonawane_Resume.pdf"
+              href="/resume.pdf"
               target="_blank"
               className="btn resume"
             >
               Learn More
             </a>
-            <a href="project.html" target="_blank" className="btn projects">
+            <a href="/projects" target="" className="btn projects">
               My Projects
             </a>
-            <a href="contact.html" target="_blank" className="btn contact">
+            <a href="/contact" target="" className="btn contact">
               Contact Me
             </a>
           </div>
@@ -124,7 +126,7 @@ const About = () => {
           <SkillsSwiper></SkillsSwiper>
         </ItemLayout>
       </div>
-      <div className="lamp">
+      <div className="lamp reveal-bottom">
         <div className="light-container">
           <div className="light active">
             <div
@@ -174,7 +176,7 @@ const About = () => {
             className={" col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
           >
             <p className="font-semibold text- w-full text-left text-2xl sm:text-5xl git-stat-text">
-              15+{" "}
+              7+{" "}
               <sub className="font-semibold text-white text-base">Projects</sub>
             </p>
           </ItemLayout>

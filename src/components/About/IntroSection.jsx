@@ -49,21 +49,21 @@ const IntroSection = () => {
 
         <div className="flex flex-col sm:flex-row sm:justify-start items-center gap-4 mt-8 reveal-bottom">
           <a
-            href="/src/Suraj_Sonawane_Resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             className="w-full sm:w-auto px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded shadow text-center"
           >
             Learn More
           </a>
           <a
-            href="project.html"
+            href="/projects"
             target="_blank"
             className="w-full sm:w-auto px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded shadow text-center"
           >
             My Projects
           </a>
           <a
-            href="contact.html"
+            href="/contact"
             target="_blank"
             className="w-full sm:w-auto px-6 py-2 bg-gray-800 hover:bg-gray-900 rounded shadow text-center"
           >

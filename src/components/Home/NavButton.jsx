@@ -5,7 +5,7 @@ import {
   NotebookText,
   Palette,
   Phone,
-  Instagram,
+  LockKeyhole,
   User,
 } from "lucide-react";
 import React from "react";
@@ -28,8 +28,8 @@ const getIcon = (icon) => {
       return <Github {...iconProps} />;
     case "linkedin":
       return <Linkedin {...iconProps} />;
-    case "instagram":
-      return <Instagram {...iconProps} />;
+    case "lockkeyhole":
+      return <LockKeyhole {...iconProps} />;
     case "resume":
       return <NotebookText {...iconProps} />;
     default:
