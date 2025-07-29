@@ -10,7 +10,7 @@ import SkillsSwiper from "./SkillsSwipper";
 import LampWithCube from "./LampWithCube";
 import LampDemo from "./LampDemo";
 import { LampContainer } from "./LampContainer";
-const StarsCanvas = React.lazy(() => import("../Encryption/StarCanvas"));
+import StarsCanvas from "../Encryption/StarCanvas";
 
 const About = () => {
   const typedRef = useRef(null);
@@ -25,7 +25,7 @@ const About = () => {
     });
 
     ScrollReveal({
-      reset: false,
+      reset: true,
       distance: "150px",
       duration: 2000,
       delay: 200,
@@ -63,9 +63,7 @@ const About = () => {
   return (
     <div className="about min-h-screen flex flex-col items-center justify-center">
       <div className="background">
-        <Suspense fallback={<div>Loading background...</div>}>
-          <StarsCanvas />
-        </Suspense>
+        <StarsCanvas></StarsCanvas>
         <img
           src="/backgrounds/trees.webp"
           alt=""
@@ -79,14 +77,14 @@ const About = () => {
             alt="horse"
             className="horse-image reveal-right-always"
             loading="eager"
-            fetchpriority="high"
+  fetchpriority="high"
           />
           <img
             src="/backgrounds/cliff.webp"
             alt="cliff"
             className="cliff-image reveal-right-always"
             loading="eager"
-            fetchpriority="high"
+  fetchpriority="high"
           />
         </div>
 
