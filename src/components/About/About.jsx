@@ -10,7 +10,7 @@ import SkillsSwiper from "./SkillsSwipper";
 import LampWithCube from "./LampWithCube";
 import LampDemo from "./LampDemo";
 import { LampContainer } from "./LampContainer";
-import StarsCanvas from "../Encryption/StarCanvas";
+const StarsCanvas = React.lazy(() => import("../Encryption/StarCanvas"));
 
 const About = () => {
   const typedRef = useRef(null);
@@ -25,7 +25,7 @@ const About = () => {
     });
 
     ScrollReveal({
-      reset: true,
+      reset: false,
       distance: "150px",
       duration: 2000,
       delay: 200,
@@ -33,7 +33,6 @@ const About = () => {
 
     ScrollReveal().reveal(".reveal-left", { origin: "left" });
     ScrollReveal().reveal(".reveal-bottom", { origin: "bottom" });
-
 
     ScrollReveal().reveal(".reveal-left-always", {
       reset: false,
@@ -48,7 +47,7 @@ const About = () => {
       distance: "150px",
       duration: 2000,
       delay: 200,
-      origin: "bottom", 
+      origin: "bottom",
     });
 
     ScrollReveal().reveal(".reveal-right-always", {
@@ -64,22 +63,30 @@ const About = () => {
   return (
     <div className="about min-h-screen flex flex-col items-center justify-center">
       <div className="background">
-        <StarsCanvas></StarsCanvas>
+        <Suspense fallback={<div>Loading background...</div>}>
+          <StarsCanvas />
+        </Suspense>
         <img
           src="/backgrounds/trees.webp"
           alt=""
           className="treebg reveal-bottom-always"
+          loading="eager"
+          fetchpriority="high"
         />
         <div className="image-container">
           <img
             src="/backgrounds/horse.png"
             alt="horse"
             className="horse-image reveal-right-always"
+            loading="eager"
+            fetchpriority="high"
           />
           <img
             src="/backgrounds/cliff.webp"
             alt="cliff"
             className="cliff-image reveal-right-always"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
 
@@ -101,11 +108,7 @@ const About = () => {
           </p>
 
           <div className="intro-buttons reveal-bottom">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              className="btn resume"
-            >
+            <a href="/resume.pdf" target="_blank" className="btn resume">
               Learn More
             </a>
             <a href="/projects" target="" className="btn projects">
